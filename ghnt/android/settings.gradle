@@ -1,0 +1,3 @@
+rootProject.name = 'ghnt'
+
+include ':app'
