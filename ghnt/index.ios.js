@@ -23,7 +23,9 @@ var ghnt = React.createClass({
         initialRoute = {{
           title: "githubNotes",
           component: Main
-        }} />
+        }}
+        navigationBarHidden={true}
+      />
     );
   }
 });

@@ -1,6 +1,8 @@
 import React from 'react-native';
 import api from '../Utils/api';
 import Dashboard from './dashboard';
+import Camera from './camera';
+import VideoCam from './video';
 
 var {
 	View,
@@ -59,6 +61,18 @@ class Main extends React.Component{
 			.catch((err) => console.err(err))
 		//sent to next route  with output of github api
 	}
+	openCamera(event) {
+		this.props.navigator.push({
+			title: 'Camera',
+			component: Camera
+		});
+	}
+	openVideo(event) {
+		this.props.navigator.push({
+			title: 'videoCam',
+			component: VideoCam
+		});
+	}
 	render(){
 		var showErr = (
 			this.state.error ? <Text> {this.state.error} </Text> : <View></View>
@@ -86,6 +100,20 @@ class Main extends React.Component{
 					size = 'large'
 				></ActivityIndicatorIOS>
 				{showErr}
+				<TouchableHighlight
+					style = {styles.button}
+					onPress = {this.openCamera.bind(this)}
+					underlayColor = 'white'
+				>
+					<Text style={styles.buttonText}> CAMERA </Text>
+				</TouchableHighlight>
+				<TouchableHighlight
+					style = {styles.button}
+					onPress = {this.openVideo.bind(this)}
+					underlayColor = 'white'
+				>
+					<Text style={styles.buttonText}> SCRECORDER </Text>
+				</TouchableHighlight>
 			</View>
 		)
 	}
