@@ -85,6 +85,7 @@ class Dashboard extends React.Component{
 
   render() {
     return (
+    	//use {} for anything that is not html or text. this allows you to run JS in JSX
     	<View style={styles.container}>
     		<Image 
     			source = {{uri: this.props.userInfo.avatar_url}}

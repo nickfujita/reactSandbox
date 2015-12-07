@@ -4,7 +4,7 @@ var FileUpload = require('NativeModules').FileUpload;
 var youtube = {
 
 	postVideo(file){
-		var url = 'https://www.googleapis.com/upload/youtube/v3/videos?part=snippet,status&access_token=ya29.QQISs1W8EuT_Ojd4m6gcYKq0JV_iLCu4bXvC5YUHNH2KyNc_ah54puPYeOWNtVwpaR7k';
+		var url = 'https://www.googleapis.com/upload/youtube/v3/videos?part=snippet,status&access_token=ya29.QQIYXdpnTxjbKMiXKZVrLWueIhKDGx8Qb3KKM5HgDXbpSqg2pq__OG77IStsnNmYfczHtw';
 		var body = {
 			snippet: {
 				title: 'my first wormie!',

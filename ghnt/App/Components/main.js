@@ -75,7 +75,7 @@ class Main extends React.Component{
 	}
 	render(){
 		var showErr = (
-			this.state.error ? <Text> {this.state.error} </Text> : <View></View>
+			this.state.error ? <Text> {this.state.error} </Text> : <View />
 		);
 		return (
 			<View style={styles.mainContainer}>

@@ -10,8 +10,6 @@ import Main from './App/Components/main';
 var {
   AppRegistry,
   StyleSheet,
-  Text,
-  View,
   NavigatorIOS
 } = React;
 
@@ -24,7 +22,6 @@ var ghnt = React.createClass({
           title: "githubNotes",
           component: Main
         }}
-        navigationBarHidden={true}
       />
     );
   }
